@@ -1,4 +1,5 @@
 import cv2
+#hi my dear fridn
 from cvzone.HandTrackingModule import HandDetector
 import numpy as np
 import math
