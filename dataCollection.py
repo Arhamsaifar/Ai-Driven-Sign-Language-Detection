@@ -1,5 +1,4 @@
 import cv2
-#hi my dear fridn
 from cvzone.HandTrackingModule import HandDetector
 import numpy as np
 import math
@@ -8,7 +7,7 @@ cap = cv2.VideoCapture(0)
 detector = HandDetector(maxHands=1)
 offset = 20
 imgSize = 300
-folder = "Data/E"
+folder = "Data/B"
 counter = 0
 while True:
     success, img = cap.read()
@@ -17,7 +16,17 @@ while True:
         hand = hands[0]
         x, y, w, h = hand['bbox']
         imgWhite = np.ones((imgSize, imgSize, 3), np.uint8) * 255
-        imgCrop = img[y - offset:y + h + offset, x - offset:x + w + offset]
+        height, width, _ = img.shape
+
+        # Clamp values to stay within image bounds
+        x1 = max(0, x - offset)
+        y1 = max(0, y - offset)
+        x2 = min(x + w + offset, width)
+        y2 = min(y + h + offset, height)
+
+        # Crop safely
+        imgCrop = img[y1:y2, x1:x2]
+
         imgCropShape = imgCrop.shape
         aspectRatio = h / w
         if aspectRatio > 1:

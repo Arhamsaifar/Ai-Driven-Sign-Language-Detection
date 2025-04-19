@@ -19,7 +19,7 @@ It’s designed with accessibility in mind—especially for people of determinat
 
 ## 🖥️ System Requirements
 
-- Python 3.7+
+- Python 3.9 
 - OpenCV
 - MediaPipe
 - NumPy
