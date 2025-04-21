@@ -84,7 +84,39 @@ It’s designed with accessibility in mind—especially for people of determinat
  
 - Displays result in real-time on screen.
 
+## 🖥️ Web App (Streamlit Version)
+I’ve developed a modern Streamlit-based web application for real-time ASL detection using a webcam. It uses a trained Keras model (keras_model.h5) and label file (labels.txt) for classification.
+
+## 🚀 Launch the Web App
+**To run the app locally:**
+```streamlit run sign_language_app.py```
+
+## ✨ App Features
+- Minimal and clean interface with sidebar controls
+
+- Start/Stop Detection button under a distinct "ACTIONS" header
+
+- Real-time display of:
+
+- Predicted Output
+
+- Prediction Confidence %
+
+- Prediction Accuracy %
+
+- Built-in webcam display with bounding box around detected hand
+
+- Responsive design and webcam disclaimer
+
+## 📌 Note
+- The system currently supports ASL letters: A–I, K, L, M, N
+
+- Confidence and accuracy are displayed in real time
+
+- The webcam activates only when Start Detection is pressed
+
 ## 🔬 Accuracy and Challenges
+
 - Achieved solid accuracy (will update exact % after full testing).
 
 
