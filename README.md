@@ -1,4 +1,4 @@
-# 🤖 **AI-Driven Real-Time Sign Language Detection**
+# 🤖 **SIGNSNAP -- AI-Powered Real-Time Sign Language Detection**
 
 ## 📌 Overview
 This project aims to bridge communication gaps by recognizing American Sign Language (ASL) letters and numbers in **real-time** using **computer vision** and **machine learning** techniques. The system leverages **MediaPipe** for hand tracking, **OpenCV** for video input, and a **RandomForest classifier** trained on hand landmark data.
